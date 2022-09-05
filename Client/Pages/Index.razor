@@ -1,9 +1,182 @@
 ﻿@page "/"
+@inject IJSRuntime JsRuntime;
 
-<PageTitle>Index</PageTitle>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Carousel Template · Bootstrap v5.1</title>
 
-<h1>Hello, world!</h1>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
-Welcome to your new app.
+    
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <!-- Bootstrap core CSS -->
+<link href="\css\bootstrap\bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container p-3">
+        
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+                       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="/lib/images/redcliffe.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Weclome to Redcliffe, Bristol</h1>
+            <p>A guide to your stay in Guinea Street.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="/lib/images/kitchen.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>A guide to the house</h1>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="/lib/images/river.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>And a guide to Bristol</h1>
+           
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <a id="carouselExampleIndicators-prev" role="button"  class="carousel-control-prev"  data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a id="carouselExampleIndicators-next"  role="button" class="carousel-control-next"  data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/map.jpg"  alt="..." style="object-fit: cover;">
+        
+        <h2>Getting Here</h2>
+        <p>The house is easily accessible by train or car.  The train station is 10 minutes walk away.</p>
+        <p><a class="btn btn-secondary" asp-page="/Directions">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+               <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/carpark.jpeg"  alt="..." style="object-fit: cover;">
+        <h2>Parking</h2>
+        <p>The house comes with a free parking space and electric car charger. Click for a guide to accessing the car park.</p>
+        <p><a class="btn btn-secondary" asp-page="/CarPark">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+             <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/guineastreet.jpg"  alt="..." style="object-fit: cover;">
+        <h2>House guide</h2>
+        <p>Wifi, amenities, house rules. That sort of thing.</p>
+        <p><a class="btn btn-secondary" asp-page="/General">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Bristol's food scene. <span class="text-muted">Hopefully, you're hungry! </span></h2>
+        <p class="lead">Bristol is one of the best places to eat in the country right now. <a asp-page="/Eating" >Click</a>  for recomendations for all occassions and budgets.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="/lib/images/pizza.jpg" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Things to do. <span class="text-muted">Local attractions for all ages. </span></h2>
+        <p class="lead">There is plenty to do and see in central Bristol. <a asp-page="/ThingsToDo" >Click</a> for a guide. </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="https://www.ssgreatbritain.org/wp-content/uploads/2021/04/image_jumbo.png" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+          
+        <h2 class="featurette-heading">Families. <span class="text-muted">Bristol has loads of things to do for families. </span></h2>
+        <p class="lead">Find out more about places and attractions for family fun that will keep kids of all ages happy. <a asp-page="/Families" >Click</a> for a guide. </p>
+      </div>
+      <div class="col-md-5">
+         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="/lib/images/viccypark.jpg" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+</main>
+
+
+    
+
+    </div>  
+
+  </body>
+  
+
+
+
+</html>

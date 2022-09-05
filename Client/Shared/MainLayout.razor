@@ -1,17 +1,94 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
 
-        <article class="content px-4">
+<!DOCTYPE html>
+
+
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AHouseOnGuineaStreet.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&family=Public+Sans:wght@30&display=swap" rel="stylesheet">
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a style="font-family: 'Pacifico', cursive; color: #9ae49e; font-size: 30px;" class="navbar-brand" href="/">a house on guinea street</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="nav-item px-3">
+               
+                <div class="navbar-collapse collapse nav-fill ">
+                    <ul class="navbar-nav flex-grow-1">
+                         <NavLink class="nav-link" href="/">
+                            Home
+                        </NavLink>
+                        <NavLink class="nav-link" href="/Directions">
+                            Getting here
+                        </NavLink>
+                        <NavLink class="nav-link" href="/CarPark">
+                            Parking
+                        </NavLink>
+                        <NavLink class="nav-link" href="/CarPark">
+                            Parking
+                        </NavLink>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            House Guide
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <NavLink class="nav-link" href="/Wifi">
+                                Wifi
+                                </NavLink>
+                                <NavLink class="nav-link" href="/Recycling">
+                                    Bins and recycling
+                                </NavLink>
+                                <NavLink class="nav-link" href="/General">
+                                    General
+                                </NavLink>
+                            </ul>
+                        </li>
+                        <NavLink class="nav-link" href="/Rules">
+                            House Rules
+                        </NavLink>
+                        <NavLink class="nav-link" href="/Eating">
+                            Restaurants
+                        </NavLink>
+                        <NavLink class="nav-link" href="/ThingsToDo">
+                            Things to do
+                        </NavLink>
+                        <NavLink class="nav-link" href="/Families">
+                            Families
+                        </NavLink>
+
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <article class="content pb-3">
             @Body
         </article>
-    </main>
-</div>
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Paul M 
+        </div>
+    </footer>
+
