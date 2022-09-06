@@ -1,5 +1,5 @@
 ﻿@page "/"
-@*@inject IJSRuntime JsRuntime;*@
+@inject IJSRuntime JsRuntime;
 
 <html lang="en">
   <head>
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Carousel Template · Bootstrap v5.1</title>
+
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
@@ -40,14 +40,22 @@
 
 <main>
 
+
+    
+
+
+
+
+
+
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" ></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" ></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" >
+      <div class="carousel-item active"  >
                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
         <img src="/lib/images/redcliffe.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
         <div class="container">
@@ -58,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" >
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
         <img src="/lib/images/kitchen.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
         <div class="container">
@@ -69,7 +77,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" >
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
         <img src="/lib/images/river.jpg" class="d-block w-100" alt="..." style="object-fit: cover;">
         <div class="container">
@@ -81,15 +89,16 @@
         </div>
       </div>
     </div>
-    <a id="carouselExampleIndicators-prev" role="button"  class="carousel-control-prev"  data-bs-target="#myCarousel" data-bs-slide="prev">
+    <a id="carouselExampleIndicators-prev" role="button"  class="carousel-control-prev"  data-bs-target="#myCarousel" data-bs-slide="prev" >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </a>
-    <a id="carouselExampleIndicators-next"  role="button" class="carousel-control-next"  data-bs-target="#myCarousel" data-bs-slide="next">
+    <a id="carouselExampleIndicators-next"  role="button" class="carousel-control-next"  data-bs-target="#myCarousel" data-bs-slide="next"  >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </a>
   </div>
+
 
 
   <!-- Marketing messaging and featurettes
@@ -101,23 +110,23 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/map.jpg"  alt="..." style="object-fit: cover;">
+        <img class="bd-placeholder-img rounded-circle d-block  " width="140" height="140" src="/lib/images/map.jpg"  alt="..." style="object-fit: cover; display:inline !important ">
         
         <h2>Getting Here</h2>
         <p>The house is easily accessible by train or car.  The train station is 10 minutes walk away.</p>
         <p><a class="btn btn-secondary" href="Directions">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-               <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/carpark.jpeg"  alt="..." style="object-fit: cover;">
+               <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/carpark.jpeg"  alt="..." style="object-fit: cover; display:inline !important ">
         <h2>Parking</h2>
         <p>The house comes with a free parking space and electric car charger. Click for a guide to accessing the car park.</p>
-        <p><a class="btn btn-secondary" asp-page="/CarPark">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary"href="CarPark">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-             <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/guineastreet.jpg"  alt="..." style="object-fit: cover;">
+             <img class="bd-placeholder-img rounded-circle d-block " width="140" height="140" src="/lib/images/guineastreet.jpg"  alt="..." style="object-fit: cover;  display:inline !important">
         <h2>House guide</h2>
         <p>Wifi, amenities, house rules. That sort of thing.</p>
-        <p><a class="btn btn-secondary" asp-page="/General">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="General">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -129,7 +138,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Bristol's food scene. <span class="text-muted">Hopefully, you're hungry! </span></h2>
-        <p class="lead">Bristol is one of the best places to eat in the country right now. <a asp-page="/Eating" >Click</a>  for recomendations for all occassions and budgets.</p>
+        <p class="lead">Bristol is one of the best places to eat in the country right now. <a href="Eating" >Click</a>  for recomendations for all occassions and budgets.</p>
       </div>
       <div class="col-md-5">
         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="/lib/images/pizza.jpg" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
@@ -141,7 +150,7 @@
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Things to do. <span class="text-muted">Local attractions for all ages. </span></h2>
-        <p class="lead">There is plenty to do and see in central Bristol. <a asp-page="/ThingsToDo" >Click</a> for a guide. </p>
+        <p class="lead">There is plenty to do and see in central Bristol. <a href="ThingsToDo" >Click</a> for a guide. </p>
       </div>
       <div class="col-md-5 order-md-1">
         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="https://www.ssgreatbritain.org/wp-content/uploads/2021/04/image_jumbo.png" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
@@ -154,7 +163,7 @@
       <div class="col-md-7">
           
         <h2 class="featurette-heading">Families. <span class="text-muted">Bristol has loads of things to do for families. </span></h2>
-        <p class="lead">Find out more about places and attractions for family fun that will keep kids of all ages happy. <a asp-page="/Families" >Click</a> for a guide. </p>
+        <p class="lead">Find out more about places and attractions for family fun that will keep kids of all ages happy. <a href="Families" >Click</a> for a guide. </p>
       </div>
       <div class="col-md-5">
          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto cover" src="/lib/images/viccypark.jpg" width="500" height="500" preserveAspectRatio="xMidYMid slice" />
@@ -180,3 +189,4 @@
 
 
 </html>
+
