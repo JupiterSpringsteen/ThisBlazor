@@ -147,6 +147,9 @@ body {
 .featurette-divider {
     margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
+.featurette-dividersm {
+    margin: 2rem 0; /* Space out the Bootstrap <hr> more */
+}
 
 /* Thin out the marketing headings */
 .featurette-heading {
@@ -208,7 +211,7 @@ body {
 }
 
 .textstyle {
-    font-family: 'Public Sans', sans-serif !important;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .cover {
